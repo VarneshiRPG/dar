@@ -1,0 +1,77 @@
+body {font-family: Arial;}
+
+#contenidoBody{text-align: center;}
+
+#contenedorObjetivo {
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+#contenedorObjetivo button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+#contenedorObjetivo button:hover {
+    background-color: #ddd;
+}
+
+#contenedorObjetivo button.active {
+    background-color: #ccc;
+}
+
+#contenedorResultado {
+    display:none;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+#contenedorResultado button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+#contenedorResultado button:hover {
+    background-color: #ddd;
+}
+
+#contenedorResultado button.active {
+    background-color: #ccc;
+}
+
+/* Style the contenedorObjetivo content */
+.resultado {
+    border-style: solid;
+    width: 70%;
+    text-align: left;
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

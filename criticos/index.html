@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Dragon Age Rol - Críticos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="../css/normalize.css"/>
+        <link rel="stylesheet" href="../css/main.css"/>            
+        <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+        <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="./js/criticos.js"></script>
+    </head>
+    <body>
+        <h3>Críticos</h3>
+        <div id="contenidoBody">
+            <div id="contenedorObjetivo">
+                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'pierna')">1</br> Pierna izquierda</button>
+                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'pierna')">2</br> Pierna derecha</button>
+                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'brazo')">3</br> Brazo izquierdo</button>
+                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'brazo')">4</br> Brazo derecho</button>
+                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'torso')">5</br> Torso</button>
+                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'cabeza')">6</br> Cabeza</button>
+            </div>
+            <br/>
+            <div id="contenedorResultado">
+                <button class="tabResultados botonResultado" onclick="seleccionarResultado(event, 1)">1</button>
+                <button class="tabResultados botonResultado" onclick="seleccionarResultado(event, 2)">2</button>
+                <button class="tabResultados botonResultado" onclick="seleccionarResultado(event, 3)">3</button>
+                <button class="tabResultados botonResultado" onclick="seleccionarResultado(event, 4)">4</button>
+                <button class="tabResultados botonResultado" onclick="seleccionarResultado(event, 5)">5</button>
+                <button class="tabResultados botonResultado" onclick="seleccionarResultado(event, 6)">6</button>
+                <button class="tabResultados botonResultado" onclick="seleccionarResultado(event, 7)">7</button>
+                <button class="tabResultados botonResultado" onclick="seleccionarResultado(event, 8)">8</button>
+                <button class="tabResultados botonResultado" onclick="seleccionarResultado(event, 9)">9</button>
+                <button class="tabResultados botonResultado" onclick="seleccionarResultado(event, 10)">10</button>
+            </div>
+            <br/>
+            <div id="pierna1" class="resultado">
+                <h3>Pierna</h3>
+                El golpe provoca que el personaje tropiece.<br/>
+                Durante su próximo turno solamente podrá realizar la acción de reincorporarse.<br/>
+                Mientras esté tumbado recibirá una penalización de -10 para realizar cualquier acción que no sea levantarse.<br/>
+                El enemigo obtendrá una bonificación de +10 al ataque que sea dirigido a este personaje.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="pierna2" class="resultado">
+                <h3>Pierna</h3>
+                El golpe provoca que la pierna quede dormida.<br/>
+                Durante su próximo turno el personaje no podrá moverse más de 1 metro, no podrá esquivar y recibirá una penalización de -5 a todas las tiradas de destreza.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="pierna3" class="resultado">
+                <h3>Pierna</h3>
+                Si el personaje no lleva armadura, el resultado será el mismo que en Rdo. 4.<br/>
+                El golpe ha sido contundente, lo que provoca que la armadura haya resultado dañada.<br/>
+                La absorción de la armadura baja en 1 punto hasta que esta sea reparada por un profesional en el oficio.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="pierna4" class="resultado">
+                <h3>Pierna</h3>
+                El golpe, aunque no ha provocado herida (hemorragia) ha acertado de lleno en el músculo.<br/>
+                La pierna del personaje queda incapacitada hasta recibir atención médica.<br/>
+                El personaje podrá andar con la ayuda de un bastón o un aliado.<br/>
+                Presenta una cojera considerable hasta que sea tratada.<br/>
+                Todas las tiradas de destreza sufren una penalización de -5 y el personaje no podrá correr.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="pierna5" class="resultado">
+                <h3>Pierna</h3>
+                El golpe provoca que el personaje sea derribado y quede atontado.<br/>
+                Durante el próximo turno el personaje solamente podrá realizar la acción de reincorporarse.<br/>
+                Mientras esté en el suelo ocurrirá lo mismo que en Rdo. 1.<br/>
+                Una vez se levanta, el personaje recibirá una penalización de -10 al ataque durante sus dos próximos turnos (tras levantarse).<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="pierna6" class="resultado">
+                <h3>Pierna</h3>
+                El golpe ha cumplido su propósito, dañar.<br/>
+                La pierna ha quedado destrozada.<br/>
+                El personaje no puede mantenerse en pie y mucho menos luchar, se considera indefenso.<br/>
+                Mientras esté en el suelo ocurrirá lo mismo que en Rdo. 1 (salvo que no se puede levantar).<br/>
+                Además la hemorragia es considerable, y el personaje no para de sangrar, por lo que el jugador deberá tirar 1d3 cada turno para resolver cuanto daño sufre.<br/>
+                Seguirá tirando hasta recibir atención médica.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="pierna7" class="resultado">
+                <h3>Pierna</h3>
+                El golpe ha cumplido su propósito, dañar.<br/>
+                La pierna se ha convertido en un despojo ensangrentado.<br/>
+                El personaje no puede mantenerse en pie y mucho menos luchar, se considera indefenso.<br/>
+                Mientras esté en el suelo ocurrirá lo mismo que en Rdo. 1  (salvo que no se puede levantar) .<br/>
+                Además la hemorragia es considerable, y el personaje no para de sangrar, por lo que el jugador deberá tirar 1d3 cada turno para resolver cuanto daño sufre.<br/>
+                Seguirá tirando hasta recibir atención médica.<br/>
+                Una vez pare de sangrar (reciba atención médica) deberá realizar una tirada de 1d6 para resolver si el personaje pierde el pie.<br/>
+                Cualquier resultado inferior a 6 y el personaje mantendrá el pie.<br/>
+                El personaje no puede andar ni moverse sin ayuda durante el resto del evento.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="pierna8" class="resultado">
+                <h3>Pierna</h3>
+                El golpe ha cumplido su propósito, dañar.<br/>
+                La pierna se ha convertido en una masa inerte de carne.<br/>
+                El personaje no puede mantenerse en pie y mucho menos luchar, se considera indefenso.<br/>
+                Mientras esté en el suelo ocurrirá lo mismo que en Rdo. 1  (salvo que no se puede levantar).<br/>
+                Además la hemorragia es considerable, y el personaje no para de sangrar, por lo que el jugador deberá tirar 1d3 cada turno para resolver cuanto daño sufre.<br/>
+                Seguirá tirando hasta recibir atención médica.<br/>
+                Una vez pare de sangrar (reciba atención médica) deberá realizar una tirada de 1d6 para resolver si el personaje pierde la pierna desde la rodilla.<br/>
+                Cualquier resultado inferior a 6 y el personaje mantendrá la pierna intacta.<br/>
+                El personaje no puede levantarse durante el resto del evento.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="pierna9" class="resultado">
+                <h3>Pierna</h3>
+                El golpe ha sido perfecto.<br/>
+                La arteria principal de la pierna ha sido seccionada.<br/>
+                El personaje, tras una fracción de segundo cae al suelo.<br/>
+                De su pierna chorrea sangre sin parar, y el personaje apenas puede hablar por la pérdida de sangre.<br/>
+                El personaje no puede mantenerse en pie, luchar y apenas hablar, se considera indefenso.<br/>
+                Mientras esté en el suelo ocurrirá lo mismo que en Rdo. 1  (salvo que no se puede levantar).<br/>
+                Además la hemorragia es mas que considerable, por lo que la muerte por shock y desangrado es casi inminente.<br/>
+                El personaje (y sus aliados) dispondrán de dos turnos para tratar de detener la hemorragia, de lo contrario el personaje morirá.<br/>
+                El  jugador deberá tirar 1d4 cada turno que está consciente para resolver cuanto daño sufre.<br/>
+                Seguirá tirando hasta recibir atención médica o morir.<br/>
+                El personaje, si sobrevive, no recupera la consciencia durante el resto del evento.<br/>
+                Si el personaje sobrevive, presentará una ligera cojera para el resto de su vida.<br/>Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="pierna10" class="resultado">
+                <h3>Pierna</h3>
+                El golpe ha sido magistral.<br/>
+                La pierna ha sido cortada por encima de la rodilla (en el caso de armas grandes) sido acuchillada múltiples veces, seccionando todas las arterias principales (armas pequeñas) sido atravesada por el muslo y la flecha se ha clavado en el talón, lo que deja al personaje con la pierna destrozada e inmóvil (arcos y ballestas).<br/>
+                El personaje mira a sus aliados por unos instantes, justo antes de que un río de sangre brote de su boca y el personaje caiga al suelo, muerto.
+            </div>
+            <div id="brazo1" class="resultado">
+                <h3>Brazo</h3>
+                El golpe provoca que el personaje deje caer aquello que lleva en la mano, que cae a un par de metros.<br/>
+                Durante su próximo turno solamente podrá realizar la acción de recoger aquello que se le cayó ya que se agacha instintivamente a recogerlo.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="brazo2" class="resultado">
+                <h3>Brazo</h3>
+                El golpe provoca que el brazo quede dormido.<br/>
+                Durante su próximo turno el personaje no podrá usar ese brazo.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="brazo3" class="resultado">
+                <h3>Brazo</h3>
+                El golpe, aunque no ha provocado herida (hemorragia) ha acertado de lleno en el músculo.<br/>
+                La mano del personaje queda incapacitada hasta recibir atención médica.<br/>
+                El personaje no podrá usar la mano hasta recibir atención médica.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="brazo4" class="resultado">
+                <h3>Brazo</h3>
+                Si el personaje no lleva armadura, el resultado será el mismo que en Rdo. 5.<br/>
+                El golpe ha sido contundente, lo que provoca que la armadura haya resultado dañada.<br/>
+                La absorción de la armadura baja en 1 punto hasta que esta sea reparada por un profesional en el oficio.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="brazo5" class="resultado">
+                <h3>Brazo</h3>
+                El golpe, aunque no ha provocado herida (hemorragia) ha acertado de lleno en el músculo.<br/>
+                El brazo del personaje queda incapacitado hasta recibir atención médica.<br/>
+                El personaje no podrá usar el brazo hasta recibir atención médica.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="brazo6" class="resultado">
+                <h3>Brazo</h3>
+                El golpe logra su cometido.<br/>
+                El brazo queda destrozado por el ataque.<br/>
+                El personaje deja caer aquello que llevara en la mano y es incapaz de mover el brazo.<br/>
+                El jugador deberá tirar 1d3 cada turno para resolver cuanto daño sufre hasta que sea tratado.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="brazo7" class="resultado">
+                <h3>Brazo</h3>
+                 El golpe ha cumplido su propósito, dañar.<br/>
+                La mano se ha convertido en un despojo ensangrentado.<br/>
+                El personaje deja caer aquello que llevara en la mano y es incapaz de mover el brazo.<br/>
+                El jugador deberá tirar 1d3 cada turno para resolver cuanto daño sufre hasta que sea tratado.<br/>
+                Una vez pare de sangrar (reciba atención médica) deberá realizar una tirada de 1d6 para resolver si el personaje pierde la mano.<br/>
+                Cualquier resultado inferior a 6 y el personaje mantendrá la mano intacta.<br/>
+                El personaje no puede usar la mano durante el resto del evento.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="brazo8" class="resultado">
+                <h3>Brazo</h3>
+                El golpe ha cumplido su propósito, dañar.<br/>
+                El brazo se ha convertido en una masa inerte de carne.<br/>
+                El personaje deja caer aquello que llevara en la mano y es incapaz de mover el brazo.<br/>
+                El jugador deberá tirar 1d3 cada turno para resolver cuanto daño sufre hasta que sea tratado.<br/>
+                Una vez pare de sangrar (reciba atención médica) deberá realizar una tirada de 1d6 para resolver si el personaje pierde el brazo desde el codo.<br/>
+                Cualquier resultado inferior a 6 y el personaje mantendrá el brazo intacto.<br/>
+                El personaje no puede usar el brazo durante el resto del evento.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="brazo9" class="resultado">
+                <h3>Brazo</h3>
+                El golpe ha sido perfecto.<br/>
+                La arteria principal del brazo ha sido seccionada.<br/>
+                El personaje, tras una fracción de segundo cae al suelo.<br/>
+                De su brazo chorrea sangre sin parar, y el personaje apenas puede hablar por la pérdida de sangre.<br/>
+                El personaje no puede luchar y apenas hablar, se considera indefenso.<br/>
+                Mientras esté tumbado recibirá una penalización de -10 para realizar cualquier acción.<br/>
+                El enemigo obtendrá una bonificación de +10 al ataque que sea dirigido a este personaje.<br/>
+                Además la hemorragia es mas que considerable, por lo que la muerte por shock y desangrado es casi inminente.<br/>
+                El personaje (y sus aliados) dispondrán de dos turnos para tratar de detener la hemorragia, de lo contrario el personaje morirá.<br/>
+                El  jugador deberá tirar 1d4 cada turno que está consciente para resolver cuanto daño sufre.<br/>
+                Seguirá tirando hasta recibir atención médica o morir.<br/>
+                El personaje, si sobrevive, no recupera la consciencia durante el resto del evento.<br/>
+                Si el personaje sobrevive, presentará una ligera molestia en el brazo para el resto de su vida.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="brazo10" class="resultado">
+                <h3>Brazo</h3>
+                El golpe ha sido magistral.<br/>
+                El brazo ha sido cortado por encima del codo (en el caso de armas grandes) sido acuchillado múltiples veces, seccionando todas las arterias principales (armas pequeñas) sido atravesado por el antebrazo y la flecha se ha clavado en el hombro, lo que deja al personaje con el brazo destrozado e inmóvil (arcos y ballestas).<br/>
+                El personaje mira a sus aliados por unos instantes, justo antes de que un río de sangre brote de su boca y el personaje caiga al suelo, muerto.
+            </div>
+            <div id="torso1" class="resultado">
+                <h3>Torso</h3>
+                El golpe provoca que el personaje quede sin respiración.<br/>
+                Durante su próximo turno el personaje golpea torpemente mientras intenta recuperar el aire.<br/>
+                Las tiradas de ataque sufren una penalización de -10.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="torso2" class="resultado">
+                <h3>Torso</h3>
+                El golpe acierta en la zona en la que nunca deberían acertar los golpes.<br/>
+                El personaje cae arrodillado de dolor y durante su siguiente turno solamente puede realizar la acción de reincorporarse.<br/>
+                Mientras está en esa posición, el enemigo tiene una bonificación de +5 al ataque.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="torso3" class="resultado">
+                <h3>Torso</h3>
+                El golpe derriba al personaje, que queda tendido de espaldas en el suelo y totalmente sin aliento.<br/>
+                Durante su próximo turno solamente puede realizar la acción de reincorporarse.<br/>
+                El enemigo obtendrá una bonificación de +10 al ataque que sea dirigido a este personaje.<br/>
+                Una vez en pie, durante sus dos próximos turnos el personaje golpea torpemente mientras intenta recuperar la compostura.<br/>
+                Sus ataques sufren una penalización de -10.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="torso4" class="resultado">
+                <h3>Torso</h3>
+                Si el personaje no lleva armadura, el resultado será el mismo que en Rdo.5.<br/>
+                El golpe ha sido contundente, lo que provoca que la armadura haya resultado dañada.<br/>
+                La absorción de la armadura baja en 2 puntos hasta que esta sea reparada por un profesional en el oficio.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="torso5" class="resultado">
+                <h3>Torso</h3>
+                El golpe, aunque no ha provocado herida (hemorragia) ha acertado de lleno en las costillas, que se resienten y vibran de dolor.<br/>
+                El personaje recibe una penalización de -10 a todas sus tiradas hasta recibir atención médica.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="torso6" class="resultado">
+                <h3>Torso</h3>
+                El golpe ha sido abrumador, y el personaje no ha sabido encajarlo.<br/>
+                Este queda aturdido durante 1d6 asaltos.<br/>
+                Mientras está aturdido, todos sus ataques sufren una penalización de -10, y el resto de sus acciones -5.<br/>
+                Además, al enemigo le será fácil golpearlo, por lo que recibe una bonificación de +5 al ataque.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="torso7" class="resultado">
+                <h3>Torso</h3>
+                El golpe ha cumplido su propósito, dañar.<br/>
+                El golpe ha provocado una grave hemorragia interna, y el personaje apenas puede mantenerse en pie.<br/>
+                Se considera indefenso.<br/>
+                El enemigo obtendrá una bonificación de +10 al ataque que sea dirigido a este personaje.<br/>
+                Hasta que no reciba atención médica el personaje apenas puede levantarse y tenerse en pie por más de un par de segundos.<br/>
+                El dolor general se lo impide.<br/>
+                Una vez tratado, el personaje sufrirá 1 punto de daño cada dos horas in-game, que se reflejará escupiendo sangre en señal de que necesita reposo completo para recuperarse del todo.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="torso8" class="resultado">
+                <h3>Torso</h3>
+                El golpe ha acertado de lleno en la columna vertebral.<br/>
+                El personaje cae al suelo con la columna pulverizada.<br/>
+                No es capaz de realizar ninguna acción hasta recibir atención médica.<br/>
+                Se considera indefenso.<br/>
+                El enemigo obtendrá una bonificación de +10 al ataque que sea dirigido a este personaje.<br/>
+                El jugador deberá tirar 1d3 cada turno hasta que reciba atención médica para determinar cuanto daño sufre.<br/>
+                Después, el jugador deberá realizar una tirada de 1d20 para resolver si el personaje queda paralizado de cintura hacia abajo permanentemente.<br/>
+                Cualquier resultado inferior a 19 significará que el personaje se recuperará.<br/>
+                El personaje queda tendido y  no puede levantarse durante el resto del evento.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="torso9" class="resultado">
+                <h3>Torso</h3>
+                El golpe ha sido perfecto.<br/>
+                El arma atraviesa su cuerpo, dañando varios órganos internos y provocando una hemorragia.<br/>
+                El personaje, tras una fracción de segundo cae al suelo.<br/>
+                De la herida chorrea sangre sin parar, y el personaje apenas puede hablar por la pérdida de sangre.<br/>
+                El personaje no puede luchar y apenas hablar, se considera indefenso.<br/>
+                El enemigo obtendrá una bonificación de +10 al ataque que sea dirigido a este personaje.<br/>
+                Además la hemorragia es mas que considerable, por lo que la muerte por shock y desangrado es casi inminente.<br/>
+                El personaje (y sus aliados) dispondrán de dos turnos para tratar de detener la hemorragia, de lo contrario el personaje morirá.<br/>
+                El  jugador deberá tirar 1d5 cada turno que está consciente para resolver cuanto daño sufre.<br/>
+                Seguirá tirando hasta recibir atención médica o morir.<br/>
+                El personaje, si sobrevive, no recupera la consciencia durante el resto del evento.<br/>
+                Si el personaje sobrevive, presentará una ligera molestia al comer, beber y realizar cualquier acción física para el resto de su vida.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="torso10" class="resultado">
+                <h3>Torso</h3>
+                El golpe ha sido magistral.<br/>
+                El golpe ha desgarrado la carne de forma generosa, lo que provoca que los órganos internos se salgan y caigan al suelo (armas CaC) ha acertado en el corazón, y la flecha ha salido por la espalda (arcos y ballestas).<br/>
+                El personaje mira a sus aliados por unos instantes, justo antes de que un río de sangre brote de su boca y el personaje caiga al suelo, muerto.
+            </div>
+            <div id="cabeza1" class="resultado">
+                <h3>Cabeza</h3>
+                El golpe provoca que el personaje quede desorientado.<br/>
+                Durante su próximo turno el personaje golpea torpemente mientras intenta orientarse.<br/>
+                Las tiradas de ataque sufren una penalización de -10.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="cabeza2" class="resultado">
+                <h3>Cabeza</h3>
+                El golpe acierta de lleno en la sien.<br/>
+                Los oídos zumban y la cabeza le da vueltas.<br/>
+                Durante su próximo turno no podrá realizar ninguna acción.<br/>
+                Además, al enemigo le será fácil golpearlo, por lo que recibe una bonificación de +5 al ataque.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="cabeza3" class="resultado">
+                <h3>Cabeza</h3>
+                El golpe abre una fea herida en la cabeza, y la sangre cae hasta los ojos.<br/>
+                El personaje estará ligeramente mareado y sufrirá una penalización de -10 a todas sus tiradas hasta que reciba atención médica.<br/>
+                Una vez tratado, sufrirá dolor de cabeza para el resto del evento.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="cabeza4" class="resultado">
+                <h3>Cabeza</h3>
+                Si el personaje no lleva armadura, el resultado será el mismo que en Rdo. 5.<br/>
+                El golpe ha sido contundente, lo que provoca que la armadura haya resultado dañada.<br/>
+                La absorción de la armadura baja en 2 puntos hasta que esta sea reparada por un profesional en el oficio.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="cabeza5" class="resultado">
+                <h3>Cabeza</h3>
+                El golpe ha sido abrumador, y el personaje no ha sabido encajarlo.<br/>
+                Este ha sido derribado y atontado.<br/>
+                Durante su próximo turno solamente puede realizar la acción de reincorporarse.<br/>
+                El enemigo obtendrá una bonificación de +10 al ataque que sea dirigido a este personaje.<br/>
+                Una vez en pie, durante sus dos próximos turnos el personaje golpea torpemente mientras intenta recuperar la compostura.<br/>
+                Sus ataques sufren una penalización de -10.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+
+            <div id="cabeza6" class="resultado">
+                <h3>Cabeza</h3>
+                El golpe ha sido importante.<br/>
+                El personaje lo ha recibido de lleno en un lado de la cara.<br/>
+                Este ha sido aturdido durante 1d6 asaltos.<br/>
+                Mientras está aturdido, todos sus ataques sufren una penalización de -10, y el resto de sus acciones -5.<br/>
+                Además, al enemigo le será fácil golpearlo, por lo que recibe una bonificación de +5 al ataque.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="cabeza7" class="resultado">
+                <h3>Cabeza</h3>
+                El golpe ha acertado de lleno.<br/>
+                El personaje cae inconsciente al instante durante 1d10 minutos.<br/>
+                El enemigo obtendrá una bonificación de +10 al ataque que sea dirigido a este personaje.<br/>
+                Hasta que no reciba atención médica o transcurra el tiempo el personaje no despertará.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="cabeza8" class="resultado">
+                <h3>Cabeza</h3>
+                El golpe ha cumplido su propósito, dañar.<br/>
+                Un golpe directo al rostro derriba al personaje, que cae al suelo con el rostro destrozado y ensangrentado.<br/>
+                El personaje queda indefenso, por lo que no es capaz de levantarse y luchar.<br/>
+                El enemigo obtendrá una bonificación de +10 al ataque que sea dirigido a este personaje.<br/>
+                El jugador deberá tirar 1d3 cada turno hasta que reciba atención médica para determinar cuanto daño sufre.<br/>
+                Después, el jugador deberá realizar una tirada de 1d20 para resolver si el personaje pierde un ojo o los dos.<br/>
+                Cualquier resultado inferior a 19 significará que el personaje se recuperará sin más problemas que una horrible cicatriz que le cruza el rostro.<br/>
+                Un resultado de 19 implica perder un ojo, mientras que un resultado de 20 implica que el personaje pierde ambos ojos y queda ciego.<br/>
+                Si se recupera, el personaje tendrá dificultades para socializar o pasar inadvertido (mientras no se cubra el rostro) para el resto de su vida.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="cabeza9" class="resultado">
+                <h3>Cabeza</h3>
+                El golpe ha sido perfecto.<br/>
+                El arma atraviesa el cráneo y provoca una hemorragia.<br/>
+                El personaje, tras una fracción de segundo cae al suelo.<br/>
+                De la herida chorrea sangre sin parar, y el personaje apenas puede hablar por la pérdida de sangre.<br/>
+                El personaje no puede luchar y apenas hablar, se considera indefenso.<br/>
+                El enemigo obtendrá una bonificación de +10 al ataque que sea dirigido a este personaje.<br/>
+                Además la hemorragia es mas que considerable, por lo que la muerte por shock y desangrado es casi inminente.<br/>
+                El personaje (y sus aliados) dispondrán de un turno para tratar de detener la hemorragia, de lo contrario el personaje morirá.<br/>
+                El  jugador deberá tirar 1d6 cada turno que está consciente para resolver cuanto daño sufre.<br/>
+                Seguirá tirando hasta recibir atención médica o morir.<br/>
+                El personaje, si sobrevive, no recupera la consciencia durante el resto del evento.<br/>
+                Si el personaje sobrevive, perderá el habla para el resto de su vida.<br/>
+                Todas las demás decisiones quedan a discreción del máster.
+            </div>
+            <div id="cabeza10" class="resultado">
+                <h3>Cabeza</h3>
+                El golpe ha sido magistral.<br/>
+                El golpe ha separado la cabeza de los hombros de un solo golpe (armas grandes) acertado en numerosas ocasiones por toda la cabeza (armas pequeñas) //ha acertado en el centro de los ojos, saliendo la flecha por la parte posterior del cráneo (arcos y ballestas).<br/>
+                El personaje cae fulminado. </div>
+        </div>
+    </body>
+</html>
