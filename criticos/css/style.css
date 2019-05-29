@@ -3,6 +3,7 @@ body {font-family: Arial;}
 #contenidoBody{text-align: center;}
 
 #contenedorObjetivo {
+    width: 70%;
     display: inline-block;
     overflow: hidden;
     border: 1px solid #ccc;
@@ -29,6 +30,7 @@ body {font-family: Arial;}
 }
 
 #contenedorResultado {
+    width: 70%;
     display:none;
     overflow: hidden;
     border: 1px solid #ccc;

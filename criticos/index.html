@@ -7,20 +7,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" href="../css/normalize.css"/>
         <link rel="stylesheet" href="../css/main.css"/>            
-        <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+        <link rel="stylesheet" href="./css/style.css"/>
+        <link rel="stylesheet" href="../css/style.css"/>      
         <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="./js/criticos.js"></script>
     </head>
     <body>
+        <div class="header">
+        </div>
         <h3>Críticos</h3>
         <div id="contenidoBody">
             <div id="contenedorObjetivo">
-                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'pierna')">1</br> Pierna izquierda</button>
-                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'pierna')">2</br> Pierna derecha</button>
-                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'brazo')">3</br> Brazo izquierdo</button>
-                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'brazo')">4</br> Brazo derecho</button>
-                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'torso')">5</br> Torso</button>
-                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'cabeza')">6</br> Cabeza</button>
+                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'pierna')">1<br/> Pierna izquierda</button>
+                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'pierna')">2<br/> Pierna derecha</button>
+                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'brazo')">3<br/> Brazo izquierdo</button>
+                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'brazo')">4<br/> Brazo derecho</button>
+                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'torso')">5<br/> Torso</button>
+                <button class="tabObjetivos botonObjetivo" onclick="seleccionarObjetivo(event, 'cabeza')">6<br/> Cabeza</button>
             </div>
             <br/>
             <div id="contenedorResultado">
@@ -174,7 +177,7 @@
             </div>
             <div id="brazo7" class="resultado">
                 <h3>Brazo</h3>
-                 El golpe ha cumplido su propósito, dañar.<br/>
+                El golpe ha cumplido su propósito, dañar.<br/>
                 La mano se ha convertido en un despojo ensangrentado.<br/>
                 El personaje deja caer aquello que llevara en la mano y es incapaz de mover el brazo.<br/>
                 El jugador deberá tirar 1d3 cada turno para resolver cuanto daño sufre hasta que sea tratado.<br/>
@@ -396,7 +399,7 @@
             <div id="cabeza10" class="resultado">
                 <h3>Cabeza</h3>
                 El golpe ha sido magistral.<br/>
-                El golpe ha separado la cabeza de los hombros de un solo golpe (armas grandes) acertado en numerosas ocasiones por toda la cabeza (armas pequeñas) //ha acertado en el centro de los ojos, saliendo la flecha por la parte posterior del cráneo (arcos y ballestas).<br/>
+                El golpe ha separado la cabeza de los hombros de un solo golpe (armas grandes) acertado en numerosas ocasiones por toda la cabeza (armas pequeñas) ha acertado en el centro de los ojos, saliendo la flecha por la parte posterior del cráneo (arcos y ballestas).<br/>
                 El personaje cae fulminado. </div>
         </div>
     </body>
