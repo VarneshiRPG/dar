@@ -10,7 +10,7 @@ function obtenerResultado() {
             clearInterval(generarResultadoAleatorio);
         }
         var numero = obtenerNumero();
-        document.getElementById("resultado").innerHTML = numero + ":" + tabla[numero];
+        document.getElementById("resultado").innerHTML = tabla[numero];
         contador++;
     }, tiempoIntervalo);
 }
